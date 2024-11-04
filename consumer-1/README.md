@@ -1,4 +1,4 @@
-# producer-1
+# consumer-1
 
 Simple consumer that reads `User` objects from a Kafka topic.
 
