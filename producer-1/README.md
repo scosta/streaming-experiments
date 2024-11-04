@@ -2,7 +2,7 @@
 
 Simple producer that writes `User` objects to a Kafka topic.
 
-Requires a `.env` file in the root folder with the following content.
+Requires a `.env` file in the `producer-1` folder with the following content.
 ```
 # .env
 KAFKA_BOOTSTRAP_SERVERS=<YOUR_BOOTSTRAP_SERVER>
