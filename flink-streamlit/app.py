@@ -22,12 +22,12 @@ consumer = Consumer(config_dict)
 
 st.title("Stock Price Averages")
 st.write(
-    "View tumbling averages for SPY stock. The chart may not show up if trading is closed for the day or otherwise not happening."
+    "View tumbling averages for CFLT stock. The chart may not show up if trading is closed for the day or otherwise not happening."
 )
 
 option = st.selectbox(
     "Start viewing stock for:",
-    (["SPY"]),
+    (["CFLT"]),
     index=None,
 )
 
@@ -134,7 +134,7 @@ st.code(
     """INSERT INTO tumble_interval
 SELECT symbol, DATE_FORMAT(window_start,'yyyy-MM-dd hh:mm:ss.SSS'), DATE_FORMAT(window_end,'yyyy-MM-dd hh:mm:ss.SSS'), AVG(price)
 FROM TABLE(
-        TUMBLE(TABLE SPY, DESCRIPTOR($rowtime), INTERVAL '5' SECONDS))
+        TUMBLE(TABLE CFLT, DESCRIPTOR($rowtime), INTERVAL '5' SECONDS))
 GROUP BY
     symbol,
     window_start,

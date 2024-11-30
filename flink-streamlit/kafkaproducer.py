@@ -35,7 +35,7 @@ srconfig = {
 # setting up the schema registry connection
 schema_registry_client = SchemaRegistryClient(srconfig)
 
-# schema for producer matching one in SPY topic in Confluent Cloud
+# schema for producer matching one in CFLT topic in Confluent Cloud
 schema_str = """{
   "$id": "http://example.com/myURI.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
