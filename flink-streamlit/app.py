@@ -45,7 +45,7 @@ async def display_quotes(component):
     topic_name = option
 
     topic_name = f"tumble_interval_{option}"
-    consumer.subscribe(topic_name)
+    consumer.subscribe([topic_name])
 
     while True:
         try:
